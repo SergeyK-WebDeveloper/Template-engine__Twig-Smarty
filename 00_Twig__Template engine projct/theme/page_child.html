@@ -1,0 +1,31 @@
+{%extends 'main.html'%}
+
+{%block left%}
+	<div class="left">
+		<h2>Категории</h2>
+	<ul>
+		
+		{%for item in cat%}
+			<li>{{item.name_category}}</li>			
+		{%endfor%}
+	</ul>
+		</div>		
+{%endblock%}
+			
+{%block content%}
+		<div class="main_text_left">
+			
+			{%if text%}
+			
+				<div>
+				      		<h2>{{text.title}}</h2>
+				     		 <p>Дата добавления: {{text.date}}</p>
+							<div>
+				<img title='{{text.title}}' align='left' src='{{text.img_src}}'><p>{{text.text}}</p>
+				            </div>
+			{%else%}
+			kod
+			{%endif%}
+			
+		</div>	
+{%endblock%}

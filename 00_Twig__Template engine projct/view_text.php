@@ -16,7 +16,6 @@ if($_POST['search']) {
 
 $cat = get_cat();
 
-$templ = $twig->loadTemplate('page.html');
-
-echo $templ->render(array('text'=>$result,'site_name'=>$site_name));
+$templ = $twig->loadTemplate('page_child.html');
+echo $templ->render(array('text'=>$result,'site_name'=>$site_name,'cat'=>$cat));
 ?>

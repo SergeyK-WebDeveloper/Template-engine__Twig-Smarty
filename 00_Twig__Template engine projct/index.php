@@ -14,8 +14,10 @@ if($_POST['cat_id']) {
 }
 
 $result = get_statti();
+
 $cat = get_cat();
 
-$templ = $twig->loadTemplate('main.html');
-echo $templ->render(array('cat'=>$cat,'statti'=>$result,'site_name'=>$site_name));
+$templ = $twig->loadTemplate('main_child.html');
+echo $templ->render(array('statti'=>$result,'cat'=>$cat,'site_name'=>$site_name));
+
 ?>
