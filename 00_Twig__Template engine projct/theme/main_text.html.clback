@@ -1,0 +1,14 @@
+<div class="main_text">	
+			{%for item in statti%}
+				<div style='padding:10px;'> 		 
+				      <h3><a title='{{item.title}}' href='view_text.php?id={{item.id}}'>{{item.title}}</a></h3>
+				     <p>Дата добавления: {{item.date}}</p>
+						<div>
+					<img title='%s' align='left' src='{{item.img_src}}'><p>{{item.discription}}</p>
+				        </div>
+				       </div>
+				<hr />
+			{%else%}
+			kod
+			{%endfor%}
+			</div>

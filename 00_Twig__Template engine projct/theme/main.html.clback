@@ -13,30 +13,20 @@
 <script src="js/script.js"></script>
 
 </head>
-
 <body>
-
-{{new}}
-{%if variable is defined %}
-{{variable}}
-{%endif%}
 	<div class="wrap">
 		
-		<div class='header'>
-		</div>
+		<div class='header'></div>
 		
 		<div class="menu">
 			{%include 'main_menu.html'%}
 		</div>
 		
 		<div class='content'>
-		
 			{%include 'main_text.html'%}
-			
 		</div>
 		
 		<div class='footer'>
-			
 			<p style='text-align:right;font_size:5px; color:white;margin:10px;'>{{site_name}}</p>
 		</div>
 	</div>

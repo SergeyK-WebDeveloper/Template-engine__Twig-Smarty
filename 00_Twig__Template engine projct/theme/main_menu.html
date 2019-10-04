@@ -1,0 +1,10 @@
+<form>
+				<fieldset>
+					<label for="menu">Главное меню</label>
+					<select name="menu" id="menu">
+						{%for item in cat%}
+							<option value='{{item.id_category}}'>{{item.name_category}}</option>
+						{%endfor%}
+					</select>
+				</fieldset>	
+			</form>	
