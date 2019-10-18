@@ -27,7 +27,7 @@ require_once "include/Twig/Autoloader.php";
 Twig_Autoloader::register();
 
 require_once "MyTemplate.php";
-//$loader = new Twig_Loader_Filesystem();
+$loader = new Twig_Loader_Filesystem('theme');
 
 //array('theme','images');
 //$loader->addPath('images');
@@ -36,7 +36,7 @@ require_once "MyTemplate.php";
 //print_r($loader->getPaths());
 
 //$loader  = new Twig_Loader_String();
-$loader1  = new Twig_Loader_Array(array(
+/*$loader1  = new Twig_Loader_Array(array(
 								
 								'base.html'=>"{%block content%}{%endblock%}"
 								
@@ -48,7 +48,7 @@ $loader2  = new Twig_Loader_Array(array(
 								
 								));
 								
-$loader  = new Twig_Loader_Chain(array($loader1,$loader2));
+$loader  = new Twig_Loader_Chain(array($loader1,$loader2));*/
 
 $twig = new Twig_Environment($loader,array(
 										//'cache'=>'cache',
@@ -56,6 +56,7 @@ $twig = new Twig_Environment($loader,array(
 										//'charset'=>"UTF-8"
 										//'base_template_class'=>'MyTemlate'
 										//'strict_variables'=>true
+										'autoescape'=>false
 										/*'autoescape'=>function ($t) {
 											if($t == 'main_menu.html') {
 												return 'html';
@@ -68,7 +69,7 @@ $twig = new Twig_Environment($loader,array(
 										));
 										
 //echo $twig->render('Test template - {{var}}',array('var'=>"Hello world"));		
-echo $twig->render('index.html',array('var'=>'Hello array'));
+//echo $twig->render('index.html',array('var'=>'Hello array'));
 
-exit();							
+					
 ?>

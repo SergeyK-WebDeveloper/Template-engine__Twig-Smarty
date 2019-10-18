@@ -5,6 +5,8 @@ header("Content-Type:text/html;charset=UTF8");
 include 'config.php';
 include 'functions.php';
 
+define('CONST','World');
+
 if($_POST['cat_id']) {
 	$cat_id = json_decode($_POST['cat_id']);
 	//$param->id = 2
@@ -13,11 +15,11 @@ if($_POST['cat_id']) {
 	exit();
 }
 
-$new = "<script>alert('hello')</script>";
-
+$new = "hello";
+$var = '10';
 $result = get_statti();
 $cat = get_cat();
 
 $templ = $twig->loadTemplate('main.html');
-echo $templ->render(array('cat'=>$cat,'statti'=>$result,'site_name'=>$site_name,'new'=>$new));
+echo $templ->render(array('cat'=>$cat,'statti'=>$result,'site_name'=>$site_name,'new'=>$new,'variable'=>$var));
 ?>

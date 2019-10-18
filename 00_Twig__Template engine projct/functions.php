@@ -1,7 +1,7 @@
 <?php
 	function get_statti($cat=FALSE) {
 		
-		$sql = "SELECT id,title,date,img_src,discription
+		$sql = "SELECT id,title,date,img_src,discription,cat
 											FROM statti";
 		
 		if($cat) {

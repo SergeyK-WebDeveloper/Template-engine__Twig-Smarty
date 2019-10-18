@@ -16,8 +16,15 @@
 
 <body>
 
-{{new}}
-{%if variable is defined %}
+{%import 'form.html' as form%}
+
+<p>
+	{{form.input('login','text','world',50)}}
+</p>
+<p>
+	{{form.input('pass','password')}}
+</p>
+{%if variable is constant('CONST') %}
 {{variable}}
 {%endif%}
 	<div class="wrap">
@@ -29,8 +36,23 @@
 			{%include 'main_menu.html'%}
 		</div>
 		
+		
 		<div class='content'>
 		
+		{%spaceless%}
+		                                                                Hello
+		{%endspaceless%}
+		
+		{%if variable is same as(10) %}
+			Yes{{variable}}
+		
+		{%else%}
+			No
+		{%endif%}
+			
+			
+			
+			
 			{%include 'main_text.html'%}
 			
 		</div>
