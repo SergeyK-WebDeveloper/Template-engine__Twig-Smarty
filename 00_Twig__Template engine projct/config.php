@@ -56,7 +56,7 @@ $twig = new Twig_Environment($loader,array(
 										//'charset'=>"UTF-8"
 										//'base_template_class'=>'MyTemlate'
 										//'strict_variables'=>true
-										'autoescape'=>false
+										'autoescape'=>false,
 										/*'autoescape'=>function ($t) {
 											if($t == 'main_menu.html') {
 												return 'html';
