@@ -15,15 +15,27 @@ if($_POST['cat_id']) {
 	exit();
 }
 
-//$new = ",Строка | для проверки | фильтра | format,";
-//$var = array('%a%'=>10,'%b%'=>20,'%c%'=>30);
-$new = array('c'=>400,'d'=>5,'e'=>600,'t'=>50,'x'=>10);
 
-//$var = array(10,20,30);
-//$var = 200536.156;
 $result = get_statti();
 $cat = get_cat();
 
+class my {
+	public $a = 'hello';
+	public $b = 'world';
+	
+	public function foo($name) {
+		return __CLASS__.__METHOD__.'||'.$name;
+	}
+}
+
+$index = array(0,1,2,3,4,5,6,7);
+$new = array('hello','world','!');
+//$new = new my();
+
+
+
+
+
 $templ = $twig->loadTemplate('main.html');
-echo $templ->render(array('cat'=>$cat,'statti'=>$result,'site_name'=>$site_name,'new'=>$new,'var'=>$var));
+echo $templ->render(array('cat'=>$cat,'statti'=>$result,'site_name'=>$site_name,'new'=>$new,'index'=>$index));
 ?>

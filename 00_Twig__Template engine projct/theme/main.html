@@ -10,23 +10,12 @@
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
+<script src="js/is.js"></script>
 <script src="js/script.js"></script>
 
 </head>
 
 <body>
-
-{%import 'form.html' as form%}
-
-<p>
-	{{form.input('login','text','world',50)}}
-</p>
-<p>
-	{{form.input('pass','password')}}
-</p>
-{%if variable is constant('CONST') %}
-{{variable}}
-{%endif%}
 	<div class="wrap">
 		
 		<div class='header'>
@@ -39,12 +28,17 @@
 		
 		<div class='content'>
 		
-{{new|url_encode}}
-	
-	
-	
+		
+		
+		{% for item in index%}
+		
+		{%endfor%}
+
+		
+		{{ "25.03.2015"|localizeddate('long', 'none', "ru-RU") }}
+
+		
 			{%include 'main_text.html'%}
-			
 		</div>
 		
 		<div class='footer'>

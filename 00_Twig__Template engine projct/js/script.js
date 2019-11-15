@@ -1,37 +1,157 @@
 $(document).ready(function() {
 	$("#menu").selectmenu({
-		//appendTo:".header"
-		//disabled:true,
 		icons:{button:"ui-icon-circle-triangle-s"},
-		position:{
-			//my:"left+10 top",
-			//at:"left top"
-		},
-		width:500,
-		change:function(event,ui) {
-			if(ui.item.value) {
-				$.ajax({
-					
-					url:"index.php",
-					type:"POST",
-					data:"cat_id="+ui.item.value,
-					dataType:'json',
-					success:function(html) {
-						if(html) {
-							var d = $(".main_text");
-							d.empty();
-							for(var i = 0; html.length > i; i++) {
-								d.append("<table class='table' width='780' border='0' cellspacing='0' cellpadding='0'><tr><td class='td_top'>" + 
-					      		"<h5><a title='" + html[i].title + "' href='view_text.php?id=" + html[i].id + "'>" + html[i].title + "</a></h5>" + 	
-								"</td></tr><tr><td><p>" +html[i].discription + "</p></td></tr><tr><td></td></tr></table>");
-							}
-						}
-					}
-					
-				});	
-			}
-		}
+		width:500
 	});
 	
 	
+	
+	if(is.is.firefox()) {
+		//alert("hello");
+	}
+	
+	
+	
+	var today = new Date();
+	var yesterday = new Date(new Date().setDate(today.getDate()-1));
+	
+	
+	if(is.any.today(today,yesterday)) {
+			//alert("hello");
+	}
+	if(is.yesterday(yesterday)) {
+			//alert("hello");
+	}
+	
+	if(is.past(today)) {
+			//alert("hello");
+	}
+	if(is.day(today,'thursday')) {
+			//alert("hello");
+	}
+	if(is.month(today,'march')) {
+			///alert("hello");
+	}
+	if(is.year(today,2015)) {
+			//alert("hello");
+	}
+	
+	var arr = new Array(1,2,3,4,5);
+	
+	if(is.inArray(50,arr)) {
+			//alert("hello");
+	}
+	
+	if(is.sorted(arr)) {
+			//alert("hello");
+	}
+	
+	var string = "127.0.0.1";
+	
+	if(is.url(string)) {
+			///alert("hello");
+	}
+	if(is.email(string)) {
+			//alert("hello");
+	}
+	if(is.timeString(string)) {
+			//alert("hello");
+	}
+	if(is.ip(string)) {
+			//alert("hello");
+	}
+	
+	string = "Some text about cars";
+	
+	if(is.include(string,'about')) {
+			//alert("hello");
+	}
+	if(is.upperCase(string)) {
+			//alert("hello");
+	}
+	
+	if(is.startWith(string, "me")) {
+			//alert("hello");
+	}
+	
+	if(is.endWith(string, "cars")) {
+			//alert("hello");
+	}
+	
+	
+	var numb = 51;
+	
+	
+	if(is.equal(numb,50)) {
+			//alert("hello");
+	}
+	if(is.not.even(numb)) {
+			//alert("hello");
+	}
+	if(is.odd(numb)) {
+			//alert("hello");
+	}
+	
+	if(is.negative(numb)) {
+			//alert("hello");
+	}
+	
+	if(is.above(numb,52)) {
+			//alert("hello");
+	}
+	
+	if(is.under(numb,52)) {
+			//alert("hello");
+	}
+	
+	if(is.within(numb,40,55)) {
+			//alert("hello");
+	}
+	
+	if(is.decimal(numb)) {
+			//alert("hello");
+	}
+	
+	if(is.integer(numb)) {
+			//alert("hello");
+	}
+	
+	
+	if(is.array(arr)) {
+			//alert("hello");
+	}
+	
+	var d = new Date();
+	if(is.date(d)) {
+			//alert("hello");
+	}
+	
+	
+	var json = "dfgdfg";
+	
+	if(is.json(json)) {
+			alert("hello");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 });
